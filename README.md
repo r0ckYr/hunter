@@ -30,11 +30,11 @@ python3 hunter.py urls.txt
 ```
 
 # Output
-1. **Inside the ```out``` directory**
+**1. Inside the ```out``` directory**
 
 ![hunter-data](https://user-images.githubusercontent.com/73944333/125824700-ed315199-11ed-40aa-be1f-698e5791eb51.png)
 
-2. **index file**
+**2. index file**
 ```
    1 http://coinbasecustody.com Registered & Protected by MarkMonitor (200) [1612]
    2 https://api.coinbase-test.com (403) [35]
@@ -52,7 +52,7 @@ python3 hunter.py urls.txt
   14 https://20.tagomi.com 403 Forbidden (403) [146]
 ```
 
-3. **headers**
+**3. headers**
 ```
 Date: Thu, 15 Jul 2021 16:08:23 GMT
 Content-Type: text/html; charset=utf-8
@@ -78,7 +78,7 @@ CF-RAY: 66f43fc26d8a69a1-BOM
 Content-Encoding: gzip
 ```
 
-4. **jsfiles**
+**4. jsfiles**
 ```
 https://api.coinbase.com/../../javascripts/all.js
 https://assets.coinbase.com/assets/webpack-runtime-eb7a2cff0e1cbbba497d.js
