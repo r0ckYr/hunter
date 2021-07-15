@@ -88,3 +88,9 @@ https://assets.coinbase.com/assets/react-4e18781c5ceb51381280.chunk.js
 https://assets.coinbase.com/assets/vendors~main-c2c58b8c5929ec1bd916.chunk.js
 https://assets.coinbase.com/assets/main-7f700925f89fdb501e4b.chunk.js
 ```
+
+# TODO
+1.Add options for users
+2.Add colors (might be!)
+3.Make efficient
+
