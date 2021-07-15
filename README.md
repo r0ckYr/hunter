@@ -2,7 +2,8 @@
 A simple python script for fetching urls. Inspired by Tomnomnom's meg. It just stores the pages in a different format.It saves the output in a directory called **./out** all the text in a directory named **text** and headers in **headers** inside **out**. It also extract all the javascript file names/links from the page.
 
 **Example:**
-![hunter](https://user-images.githubusercontent.com/73944333/125823359-183de701-31fa-4884-8dc9-5f8e5077e788.png)
+
+![hunter-data](https://user-images.githubusercontent.com/73944333/125824700-ed315199-11ed-40aa-be1f-698e5791eb51.png)
 
 
 # Install
@@ -19,6 +20,11 @@ urls.txt
 https://www.example.com
 https://www.example.com/robot.txt
 https://www.example.com/all.js
+http://example.com
+https://example.com
+http://example.net
 ```
 
+```
 python3 hunter.py urls.txt
+```
