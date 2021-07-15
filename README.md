@@ -91,6 +91,8 @@ https://assets.coinbase.com/assets/main-7f700925f89fdb501e4b.chunk.js
 
 # TODO
 1.Add options for users
+
 2.Add colors (might be!)
+
 3.Make efficient
 
