@@ -96,5 +96,5 @@ https://assets.coinbase.com/assets/main-7f700925f89fdb501e4b.chunk.js
 
 2.Add colors (might be!)
 
-3.Make efficient
+3.Performance?
 
