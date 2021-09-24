@@ -1,5 +1,5 @@
 # hunter
-A simple python script for fetching urls. It saves the output in a directory called **./out** all the text in a directory named **text** and headers in **headers** inside **out**. It also extract all the javascript file names/links from the page and saves the urls which gives an error in a file **errors**
+A python script for fetching urls. It saves the output in a directory called **./out** all the text in a directory named **text** and headers in **headers** inside **out**. It also extract all the javascript file names/links from the page and saves the urls which gives an error in a file **errors**
 
 Inspired by Tomnomnom's meg. It just stores data in a different format.
 
