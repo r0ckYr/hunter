@@ -12,6 +12,7 @@ Inspired by Tomnomnom's meg. It just stores data in a different format.
 ```
 git clone https://github.com/r0ckYr/hunter
 cd hunter
+pip3 install -r requirements.txt
 python3 hunter.py urls.txt
 ```
 
@@ -25,10 +26,23 @@ https://www.example.com/all.js
 http://example.com
 https://example.com
 http://example.net
+api.example.com
+aa.wiki.com
+www.google.com/all.js
 ```
 
 ```
-python3 hunter.py urls.txt
+python3 hunter.py -t 20 -timeout 10 domains.txt
+```
+
+```
+arguments:
+    -h             Prints help information
+    -t             Number of threads (default 20)
+    -p             ports range (eg., 80,8443,443,8080)
+    -timeout       Timeout in seconds (default 10)
+    --no-redirect  Don't allow redirects (default true)
+    --no-save      Don't save response (defatult true)
 ```
 
 # Output
@@ -92,9 +106,7 @@ https://assets.coinbase.com/assets/main-7f700925f89fdb501e4b.chunk.js
 ```
 
 # TODO
-1.Add options for users
+1.Add colors (might be!)
 
-2.Add colors (might be!)
-
-3.Performance?
+2.Performance?
 
