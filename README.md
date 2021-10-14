@@ -1,5 +1,5 @@
 # hunter
-A python script for fetching urls. It saves the output in a directory called **./out** all the text in a directory named **text** and headers in **headers** inside **out**. It also extract all the javascript file names/links from the page and saves the urls which gives an error in a file **errors**
+hunter.py can be used to check for working http and https servers and fetching urls. It saves the output in a directory called **./out** all the text in a directory named **text** and headers in **headers** inside **out**. It also extract all the javascript file names/links from the page and saves the urls which gives an error in a file **errors**
 
 Inspired by Tomnomnom's meg. It just stores data in a different format.
 
@@ -32,14 +32,14 @@ www.google.com/all.js
 ```
 
 ```
-python3 hunter.py -t 20 -timeout 10 domains.txt
+python3 hunter.py -t 20 -timeout 10 urls.txt
 ```
 
 ```
 arguments:
     -h             Prints help information
     -t             Number of threads (default 20)
-    -p             ports range (eg., 80,8443,443,8080)
+    -p             ports to scan (eg., 80,8443,443,8080)
     -timeout       Timeout in seconds (default 10)
     --no-redirect  Don't allow redirects (default true)
     --no-save      Don't save response (defatult true)
@@ -109,4 +109,6 @@ https://assets.coinbase.com/assets/main-7f700925f89fdb501e4b.chunk.js
 1.Add colors (might be!)
 
 2.Performance?
+
+3. add -paths option
 
