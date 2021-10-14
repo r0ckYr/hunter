@@ -110,5 +110,5 @@ https://assets.coinbase.com/assets/main-7f700925f89fdb501e4b.chunk.js
 
 2.Performance?
 
-3. add -paths option
+3.add -paths option
 
