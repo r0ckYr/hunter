@@ -7,25 +7,36 @@ import concurrent.futures
 import subprocess
 from bs4 import BeautifulSoup
 import urllib3
+import socket
 
 def send_request(domain):
     global session
     global REDIRECT
+    global TIMEOUT
+    try:
+        if ':' in domain:
+            host = domain[:int(domain.index(':'))]
+        else:
+            host = domain
+        socket.gethostbyname_ex(host)
+    except Exception as e:
+        return None
 
     try:
         domain = "https://"+domain
-        r = session.get(domain, allow_redirects=REDIRECT)
+        r = session.get(domain, allow_redirects=REDIRECT, timeout=TIMEOUT)
+        print(domain)
         return r
     except Exception as e:
         domain = domain.replace('https://', '')
         try:
             domain = "http://"+domain
-            r = session.get(domain, allow_redirects=REDIRECT)
+            r = session.get(domain, allow_redirects=REDIRECT, timeout=TIMEOUT)
+            print(domain)
             return r
         except:
             pass
 
-        print(f"{domain} : {e}")
         with open('errors', 'a') as f:
             f.write(domain+'\n')
         return None
@@ -41,7 +52,11 @@ def save_response(resp):
     #index file
     global js_files
     global SAVE
-    domain = resp.url
+
+    if resp.history:
+        domain = resp.history[0].url[:-1]
+    else:
+        domain = resp.url[:-1]
 
     with open('index', 'a') as f:
         title = get_title(resp)
@@ -235,7 +250,7 @@ def main():
         usage()
 
     REDIRECT = True
-    TIMEOUT = 10
+    TIMEOUT = 5
     THREADS = 20
     PORTS = []
     SAVE= True
@@ -265,9 +280,8 @@ def main():
         DOMAINS[i] = DOMAINS[i].replace("https://", '')
         DOMAINS[i] = DOMAINS[i].replace("http://", '')
 
-    #add ports --> to do
-    #if len(PORTS) != 0:
-        #DOMAINS = add_ports(DOMAINS)
+    if len(PORTS) != 0:
+        DOMAINS = add_ports(DOMAINS)
 
     #requests object
     session = requests.Session()
