@@ -1,8 +1,6 @@
 # hunter
 hunter.py can be used to check for working http and https servers and fetching urls. It saves the output in a directory called **./out** all the text in a directory named **text** and headers in **headers** inside **out**. It also extract all the javascript file names/links from the page and saves the urls which gives an error in a file **errors**
 
-Inspired by Tomnomnom's meg. It just stores data in a different format.
-
 **Example:**
 
 ![hunter-data](https://user-images.githubusercontent.com/73944333/125824700-ed315199-11ed-40aa-be1f-698e5791eb51.png)
