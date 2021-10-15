@@ -127,11 +127,7 @@ def get_js_files(resp, url):
                         name = name[1:]
                         if name[0] == '/':
                             name = name[1:]
-                if '/' in name:
-                    if isValidDomain(name.split('/')[0]):
-                        script_files.append(name)
-                else:
-                    script_files.append(url+'/'+name)
+                script_files.append(url+'/'+name)
 
     return script_files
 
